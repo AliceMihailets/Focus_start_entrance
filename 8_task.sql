@@ -1,0 +1,1 @@
+--8. —формируйте выборку, который содержит информацию о клиентах, которые полностью погасили кредит, --но при этом не закрыли продукт.select cl.*from CLIENTS cl	join PRODUCTS prod on prod.CLIENT_REF = cl.IDjoin ACCOUNTS acc on acc.PRODUCT_REF = prod.IDwhere prod.CLOSE_DATE is null	  and acc.CLOSE_DATE is not null	  and prod.PRODUCT_TYPE_ID = 1
